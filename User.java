@@ -59,7 +59,7 @@
          if (fCount == maxfCount) {
             return false; //list full
          }
-         follows[fcount] = name;
+         follows[fCount] = name;
         fCount++;
         return true;
         }
@@ -72,10 +72,10 @@ doing fCount--.*/
         if (follows(name) == false) {
             return false; //name isnt on the list
         }
-        for (int i=0; i<fCount-1; i++) {
+        for (int i=0; i < fCount; i++) {
             if (follows[i].equals(name)) { //we found the name
-                for (int j=i; j<fCount; j++) {
-                    follows[j]=follows[j+1]; //take j+1 and put in j place to close the gap
+                for (int j=i; j<fCount - 1; j++) {
+                    follows[j] = follows[j + 1]; //take j+1 and put in j place to close the gap
             }
         follows[fCount -1] = null; //last one turns null
         fCount--;
