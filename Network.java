@@ -80,6 +80,7 @@ public class Network {
             User candidate = users[i];
             if (candidate == target) {
                 continue;
+            }
             if (target.follows(candidate.getName())) {
                 continue;
             }
@@ -89,7 +90,6 @@ public class Network {
                 best = candidate;
             }
         }
-    }
         if (best == null) {
         return null;
             } else {
@@ -131,7 +131,7 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-       String ans = "network:\n";
+       String ans = "Network:\n";
        for (int i=0; i < userCount; i++) {
         ans += users[i] + "\n";
        }
